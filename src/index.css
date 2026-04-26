@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  /* Vibrant Palette Colors */
+  --color-sesi-blue: #1d4ed8;       /* Blue 700 */
+  --color-sesi-blue-dark: #1e3a8a;  /* Blue 900 */
+  --color-sesi-orange: #f97316;     /* Orange 500 */
+  --color-sesi-green: #22c55e;      /* Green 500 */
+  --color-sesi-gray: #f8fafc;       /* Slate 50 */
+}
+
+@layer base {
+  body {
+    @apply bg-sesi-gray text-slate-900 font-sans antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-black tracking-tight text-slate-900;
+  }
+}
+
+@layer components {
+  /* Buttons */
+  .btn-sesi-primary {
+     @apply px-8 py-4 rounded-2xl font-black transition-all active:scale-95 flex items-center justify-center gap-3 bg-sesi-blue text-white shadow-lg hover:bg-blue-800 hover:shadow-blue-200;
+  }
+
+  .btn-sesi-secondary {
+    @apply px-8 py-4 rounded-2xl font-black transition-all active:scale-95 flex items-center justify-center gap-3 bg-white text-sesi-blue border-2 border-slate-200 hover:border-sesi-blue hover:bg-blue-50;
+  }
+  
+  .btn-sesi-green {
+    @apply px-8 py-4 rounded-2xl font-black transition-all active:scale-95 flex items-center justify-center gap-3 bg-sesi-green text-white shadow-lg hover:bg-green-600;
+  }
+
+  /* Cards & Layout */
+  .card-sesi {
+    @apply bg-white rounded-[32px] shadow-sm border border-slate-100 p-8 transition-shadow hover:shadow-md;
+  }
+
+  .status-banner {
+    @apply bg-white rounded-[32px] p-8 shadow-sm border-l-8 border-sesi-orange;
+  }
+
+  /* Inputs */
+  .input-sesi {
+    @apply w-full px-5 py-4 rounded-2xl border-2 border-slate-100 bg-slate-50 focus:bg-white focus:border-sesi-blue focus:ring-0 outline-none transition-all text-lg font-medium;
+  }
+
+  .label-sesi {
+    @apply block text-xs font-black uppercase text-slate-400 tracking-widest mb-2 ml-1;
+  }
+}
+
+/* Accessibility: Bigger touch targets and high contrast */
+input, button {
+  min-height: 48px;
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Portal EJA SESI",
+  "description": "Portal de matrícula e gestão para Educação de Jovens e Adultos (EJA) do SESI, com validação de documentos por IA.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "Identidade Visual SESI",
+    "Validação de Documentos com IA",
+    "Gestão Administrativa",
+    "Acessibilidade para Adultos"
+  ]
+}
